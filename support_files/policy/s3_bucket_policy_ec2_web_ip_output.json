@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::lab-edu-bucket-image-761018883496",
+                "arn:aws:s3:::lab-edu-bucket-image-761018883496/*"
+            ],
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "3.34.173.225"
+                }
+            }
+        }
+    ]
+}
